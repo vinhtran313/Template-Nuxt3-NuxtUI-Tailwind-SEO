@@ -56,6 +56,20 @@ export const useToastStore = defineStore({
       this.type = "error";
       this.info = toast.info || "";
     },
+    showWarningToast(toast: toastDto) {
+      this.show = true;
+      this.message = toast.message || "";
+      this.title = toast.title;
+      this.type = "warning";
+      this.info = toast.info || "";
+    },
+    showInfoToast(toast: toastDto) {
+      this.show = true;
+      this.message = toast.message || "";
+      this.title = toast.title;
+      this.type = "info";
+      this.info = toast.info || "";
+    },
     closeToast() {
       this.show = false;
     },

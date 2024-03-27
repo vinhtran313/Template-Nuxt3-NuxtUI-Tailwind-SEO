@@ -37,7 +37,7 @@ const selected = ref(demandTypes[0]);
 const message = ref("");
 
 async function submitForm() {
-  toastStore.showSuccessToast({
+  toastStore.showInfoToast({
     title: "contact.success",
   });
 }

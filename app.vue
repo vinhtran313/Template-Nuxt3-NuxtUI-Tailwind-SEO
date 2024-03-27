@@ -93,7 +93,6 @@ useHead({
     />
     <Body class="bg-white dark:bg-zinc-950">
       <LayoutCommandConsole />
-      <LayoutScrollToTop />
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>

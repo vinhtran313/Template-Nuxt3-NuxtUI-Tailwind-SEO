@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { CheckCircleIcon, XCircleIcon, InformationCircleIcon, ShieldExclamationIcon } from "@heroicons/vue/24/outline";
-import { XMarkIcon } from "@heroicons/vue/20/solid";
 import type { PropType } from "vue";
 
 const props = defineProps({
@@ -53,15 +51,18 @@ watch(
         leave-from-class="opacity-100"
         leave-to-class="opacity-0"
       >
-        <div v-if="show" class="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg dark:bg-neutral-800 shadow-lg border dark:border-neutral-700 bg-white">
+        <div
+          v-if="show"
+          class="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg dark:bg-neutral-800 shadow-lg border dark:border-neutral-700 bg-white"
+        >
           <div class="p-4">
             <div class="flex justify-between" :class="description ? 'items-start' : 'items-center'">
               <div class="flex gap-2">
                 <div>
-                  <CheckCircleIcon class="h-6 w-6 text-green-400" aria-hidden="true" v-if="type === 'success'" />
-                  <XCircleIcon class="h-6 w-6 text-red-400" aria-hidden="true" v-if="type === 'error'" />
-                  <InformationCircleIcon class="h-6 w-6 text-yellow-400" aria-hidden="true" v-if="type === 'warning'" />
-                  <ShieldExclamationIcon class="h-6 w-6 text-blue-400" aria-hidden="true" v-if="type === 'info'" />
+                  <UIcon name="i-simple-line-icons-check" class="h-6 w-6 text-green-400" aria-hidden="true" v-if="type === 'success'" />
+                  <UIcon name="i-codicon-error" class="h-6 w-6 text-red-400" aria-hidden="true" v-if="type === 'error'" />
+                  <UIcon name="i-ic-round-error-outline" class="h-6 w-6 text-yellow-400" aria-hidden="true" v-if="type === 'warning'" />
+                  <UIcon name="i-ph-info-light" class="h-6 w-6 text-blue-400" aria-hidden="true" v-if="type === 'info'" />
                 </div>
                 <div class="flex flex-col gap-1">
                   <div class="flex items-center gap-1">
@@ -79,7 +80,7 @@ watch(
               </div>
               <button type="button" @click="emit('close')" class="inline-flex rounded-md bg-secondary text-gray-400 hover:text-gray-500 focus:outline-none">
                 <span class="sr-only">Close</span>
-                <XMarkIcon class="h-5 w-5" aria-hidden="true" />
+                <UIcon name="i-ep-close-bold" class="h-5 w-5" aria-hidden="true" />
               </button>
             </div>
           </div>

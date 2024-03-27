@@ -20,7 +20,7 @@ const navigation = getNavigation("home");
             :to="item.to"
             class="flex items-center rounded-full px-4 sm:px-6 py-1 border border-transparent hover:text-black hover:bg-white-900/50 hover:border-white/5 dark:hover:text-white/70 duration-300 ease-in-out transition-all"
           >
-            <component :is="item.icon" class="w-7 h-7 sm:w-6 sm:h-6 font-medium" />
+            <UIcon :name="item.icon" class="w-7 h-7 sm:w-6 sm:h-6 font-medium" />
             <span class="hidden sm:inline-block ml-2 font-medium">{{ item.name }}</span>
           </NuxtLink>
         </nav>

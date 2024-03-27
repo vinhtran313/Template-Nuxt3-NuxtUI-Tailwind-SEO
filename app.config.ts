@@ -14,5 +14,8 @@ export default defineAppConfig({
         background: "bg-transparent dark:bg-transparent",
       },
     },
+    icons: {
+      dynamic: true,
+    },
   },
 });
